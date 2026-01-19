@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROL.menuBar">
+   <children>
+      <AnchorPane fx:id="content" prefHeight="551.0" prefWidth="821.0">
+         <children>
+            <AnchorPane fx:id="menuBar" prefHeight="551.0" prefWidth="200.0" style="-fx-background-color: black;">
+               <children>
+                  <Button layoutX="8.0" layoutY="40.0" mnemonicParsing="false" onAction="#homeTab" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="8.0" layoutY="474.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Log out" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/log-out-9-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="searchBtn" layoutX="8.0" layoutY="110.0" mnemonicParsing="false" onAction="#searchTab" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/magnifying-glass.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="8.0" layoutY="183.0" mnemonicParsing="false" onAction="#libraryTab" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Library" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/library-114-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="8.0" layoutY="256.0" mnemonicParsing="false" onAction="#ProfileTab" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Profile" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/icon-user-5-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

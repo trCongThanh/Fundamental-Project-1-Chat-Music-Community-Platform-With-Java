@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CDpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROL.songControl">
+   <children>
+      <AnchorPane fx:id="blur" opacity="0.48" prefHeight="552.0" prefWidth="823.0" style="-fx-background-color: black;" />
+      <ScrollPane layoutX="180.0" layoutY="14.0" prefHeight="542.0" prefWidth="428.0" style="-fx-background-radius: 1%;" vbarPolicy="NEVER">
+         <content>
+            <AnchorPane fx:id="music" prefHeight="1050.0" prefWidth="425.0" style="-fx-background-radius: 5%; -fx-background-color: #4B4B4B;">
+               <children>
+                  <AnchorPane fx:id="CDcontain" layoutX="35.0" layoutY="40.0" prefHeight="410.0" prefWidth="358.0" style="-fx-background-color: #bad5d6; -fx-background-radius: 20%;">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="320.0" prefHeight="49.0" prefWidth="50.0" style="-fx-background-color: #aebece; -fx-background-radius: 100%;">
+                           <children>
+                              <AnchorPane layoutX="22.0" layoutY="7.0" prefHeight="35.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="11.0" layoutY="13.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="34.0" layoutY="13.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="287.0" layoutY="320.0" prefHeight="49.0" prefWidth="50.0" style="-fx-background-color: #aebece; -fx-background-radius: 100%;">
+                           <children>
+                              <AnchorPane layoutX="22.0" layoutY="7.0" prefHeight="35.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="10.0" layoutY="13.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="33.0" layoutY="13.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="51.0" layoutY="10.0" prefHeight="14.0" prefWidth="261.0" style="-fx-background-color: #fddea9; -fx-background-radius: 10%;">
+                           <children>
+                              <AnchorPane layoutX="28.0" layoutY="3.0" prefHeight="35.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="11.0" layoutY="13.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="165.0" layoutY="13.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="82.0" layoutY="3.0" prefHeight="35.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="44.0" layoutY="10.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="64.0" layoutY="13.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="121.0" layoutY="2.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="142.0" layoutY="4.0" prefHeight="35.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="182.0" layoutY="4.0" prefHeight="35.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="102.0" layoutY="7.0" prefHeight="35.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="206.0" layoutY="5.0" prefHeight="35.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="230.0" layoutY="13.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="245.0" layoutY="8.0" prefHeight="23.0" prefWidth="6.0" style="-fx-background-color: black;" />
+                           </children>
+                        </AnchorPane>
+                        <ProgressBar fx:id="progressBar" layoutX="81.0" layoutY="360.0" onMouseClicked="#gettime" prefHeight="23.0" prefWidth="198.0" progress="0.0" styleClass="pbar" stylesheets="@GUI.css" />
+                        <ImageView fx:id="playbtn" fitHeight="66.0" fitWidth="68.0" layoutX="149.0" layoutY="287.0" onMouseClicked="#playsong" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/stop.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="pausebtn" fitHeight="70.0" fitWidth="68.0" layoutX="148.0" layoutY="287.0" onMouseClicked="#stopsong" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/pause.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="backten" fitHeight="61.0" fitWidth="62.0" layoutX="81.0" layoutY="289.0" onMouseClicked="#backten" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/b10.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="goten" fitHeight="61.0" fitWidth="62.0" layoutX="226.0" layoutY="289.0" onMouseClicked="#goten" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/n10.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="CD" fitHeight="189.0" fitWidth="186.0" layoutX="89.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/CD.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="name" layoutX="20.0" layoutY="251.0" prefHeight="35.0" prefWidth="258.0" text="NAME" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="addList" layoutX="278.0" layoutY="236.0" onMouseClicked="#addtoPlaylist" prefHeight="65.0" prefWidth="35.0" styleClass="add" stylesheets="@GUI.css" text="♥" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="53.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="addList3" layoutX="319.0" layoutY="239.0" onMouseClicked="#downloadFile" prefHeight="30.0" prefWidth="36.0" rotate="90.0" styleClass="add" stylesheets="@GUI.css" text="⇥" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="53.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="-2.0" layoutY="88.0" onMouseClicked="#beforeSong" prefHeight="109.0" prefWidth="31.0" styleClass="next" stylesheets="@GUI.css">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="67.0" prefHeight="40.0" prefWidth="11.0" rotate="-16.7" style="-fx-background-color: #aebece; -fx-background-radius: 20;" />
+                              <AnchorPane layoutX="13.0" layoutY="30.0" prefHeight="43.0" prefWidth="11.0" rotate="10.8" style="-fx-background-color: #aebece; -fx-background-radius: 20;" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="330.0" layoutY="115.0" onMouseClicked="#nextSong" prefHeight="109.0" prefWidth="31.0" rotate="180.0" styleClass="next" stylesheets="@GUI.css">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="67.0" prefHeight="40.0" prefWidth="11.0" rotate="-16.7" style="-fx-background-color: #aebece; -fx-background-radius: 20;" />
+                              <AnchorPane layoutX="13.0" layoutY="30.0" prefHeight="43.0" prefWidth="11.0" rotate="10.8" style="-fx-background-color: #aebece; -fx-background-radius: 20;" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="removeList" layoutX="268.0" layoutY="236.0" onMouseClicked="#removeFromlist" prefHeight="65.0" prefWidth="55.0" styleClass="add" stylesheets="@GUI.css" text="💔" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Arial Bold" size="53.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="note" fitHeight="189.0" fitWidth="186.0" layoutX="90.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../img/songnote2.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="32.0" layoutY="520.0" prefHeight="257.0" prefWidth="362.0" style="-fx-background-color: #383838; -fx-background-radius: 10;">
+                     <children>
+                        <Label fx:id="artistName" layoutX="72.0" layoutY="125.0" text="Tên Nghệ sĩ" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="15.0" layoutY="8.0" opacity="0.29" prefHeight="102.0" prefWidth="333.0" style="-fx-background-color: black;" />
+                        <ImageView fx:id="imgBG" fitHeight="102.0" fitWidth="333.0" layoutX="15.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="lore" alignment="TOP_LEFT" layoutX="18.0" layoutY="8.0" prefHeight="96.0" prefWidth="325.0" text="Tiểu sử" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane fx:id="performScroll" hbarPolicy="NEVER" layoutX="6.0" layoutY="168.0" prefHeight="75.0" prefWidth="350.0" vbarPolicy="NEVER">
+                          <content>
+                            <AnchorPane fx:id="performPane" minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="349.0" style="-fx-background-color: #383838;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="5.0" prefHeight="26.0" prefWidth="223.0" text="Performed by participants" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <effect>
+                              <InnerShadow choke="0.85" height="36.98" radius="15.942499999999999" width="28.79">
+                                 <color>
+                                    <Color red="0.21960784494876862" green="0.21960784494876862" blue="0.21960784494876862" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </ScrollPane>
+                        <ImageView fx:id="imgA" fitHeight="52.0" fitWidth="54.0" layoutX="18.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="youlikePane" layoutX="34.0" layoutY="795.0" prefHeight="224.0" prefWidth="358.0" style="-fx-background-color: #383838; -fx-background-radius: 10;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="1.0" text="You might also like" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="3.0" layoutY="25.0" prefHeight="191.0" prefWidth="352.0" vbarPolicy="NEVER">
+                          <content>
+                            <AnchorPane fx:id="likeParent" minHeight="0.0" minWidth="0.0" prefHeight="187.0" prefWidth="600.0" style="-fx-background-color: #4B4B4B;" />
+                          </content>
+                           <effect>
+                              <InnerShadow choke="0.64" height="39.99" radius="21.075000000000003" width="46.31">
+                                 <color>
+                                    <Color red="0.359649121761322" green="0.3452187478542328" blue="0.3452187478542328" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </ScrollPane>
+                        <Label layoutX="333.0" layoutY="1.0" onMouseClicked="#nextScroll" text="&gt;" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="302.0" layoutY="1.0" onMouseClicked="#backScroll" rotate="180.0" text="&gt;" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutY="10.0" onMouseClicked="#left" prefHeight="36.0" prefWidth="52.0" rotate="180.0" text="➤" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="33.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="52.0" layoutY="475.0" text="ABOUT SINGER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+         <effect>
+            <InnerShadow choke="0.84" height="56.83" radius="36.58" width="91.49">
+               <color>
+                  <Color red="0.2631579041481018" green="0.2631579041481018" blue="0.2631579041481018" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </ScrollPane>
+   </children>
+</AnchorPane>

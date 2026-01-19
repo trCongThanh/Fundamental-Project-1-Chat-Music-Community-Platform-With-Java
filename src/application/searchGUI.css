@@ -1,0 +1,9 @@
+.scroll-pane {
+    -fx-padding: 0;
+    -fx-margin: 0;
+}
+.choose:hover{
+	 -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+    -fx-scale-z: 1.04;
+}
