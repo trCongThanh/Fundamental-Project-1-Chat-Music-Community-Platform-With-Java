@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROL.profileControl">
+   <left>
+      <AnchorPane style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="menuBar" prefHeight="551.0" prefWidth="200.0" style="-fx-background-color: black;">
+               <children>
+                  <Button layoutX="8.0" layoutY="40.0" mnemonicParsing="false" onAction="#homeTab" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Home Page" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="LogoutButton" layoutX="8.0" layoutY="474.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Log out" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/log-out-9-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="searchBtn" layoutX="8.0" layoutY="110.0" mnemonicParsing="false" onAction="#searchTab" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/magnifying-glass.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="8.0" layoutY="183.0" mnemonicParsing="false" onAction="#libraryTab" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Library" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/library-114-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="8.0" layoutY="256.0" mnemonicParsing="false" onAction="#ProfileTab" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Profile" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Picture%20Slide/icon-user-5-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="551.0" prefWidth="634.0" style="-fx-background-color: #292929;" styleClass="transparent-scroll-pane" stylesheets="@GUI.css" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane prefHeight="730.0" prefWidth="200.0" style="-fx-background-color: #484b4b;">
+               <children>
+                  <AnchorPane layoutX="-1.0" prefHeight="214.0" prefWidth="624.0" styleClass="backgroundColor" stylesheets="@GUI.css">
+                     <children>
+                        <Label fx:id="UsernameLabel" layoutX="205.0" layoutY="81.0" prefHeight="36.0" prefWidth="188.0" text="Username">
+                           <font>
+                              <Font name="Arial" size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="ChangeAvatarButton" layoutX="29.0" layoutY="175.0" mnemonicParsing="false" onAction="#ChangeAvatar" prefHeight="27.0" prefWidth="128.0" style="-fx-background-radius: 10;" text="Change Avatar">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="AvatarImageView" fitHeight="152.0" fitWidth="155.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="2.0" layoutY="214.0" prefHeight="512.0" prefWidth="618.0" style="-fx-background-color: #484b4b;">
+                     <children>
+                        <Label layoutX="28.0" layoutY="14.0" prefHeight="50.0" prefWidth="258.0" style="-fx-background-color: black;" text="Edit profile" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="103.0" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: black;" text="Username" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="UserNameTextField" layoutX="28.0" layoutY="142.0" prefHeight="26.0" prefWidth="269.0" />
+                        <Label layoutX="28.0" layoutY="189.0" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: black;" text="Password" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="266.0" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: black;" text="Date of Birth" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="DayComboBox" layoutX="28.0" layoutY="312.0" prefWidth="150.0" />
+                        <Button fx:id="SaveButton" layoutX="403.0" layoutY="461.0" mnemonicParsing="false" onAction="#ChangeInformation" prefHeight="34.0" prefWidth="121.0" style="-fx-background-radius: 20; -fx-background-color: #484b4b;" styleClass="button-style" stylesheets="@Button.css" text="Save" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="PasswordTextField" layoutX="28.0" layoutY="226.0" prefHeight="26.0" prefWidth="269.0" />
+                        <ComboBox fx:id="MonthComboBox" layoutX="189.0" layoutY="311.0" prefWidth="150.0" />
+                        <Label layoutX="28.0" layoutY="364.0" prefHeight="26.0" prefWidth="174.0" style="-fx-background-color: black;" text="Gender" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="GenderComboBox" layoutX="28.0" layoutY="405.0" prefWidth="150.0" />
+                        <TextField fx:id="YearTextField" layoutX="354.0" layoutY="311.0" prefHeight="27.0" prefWidth="136.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootpane" alignment="CENTER_RIGHT" onMouseEntered="#settheme" onMouseExited="#settheme" onMouseMoved="#settheme" prefHeight="553.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROL.playlistControl">
+   <children>
+      <AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="621.0" style="-fx-background-color: #484b4b;">
+         <children>
+            <AnchorPane fx:id="createList" layoutX="126.0" layoutY="14.0">
+               <children>
+                  <Label prefHeight="100.0" prefWidth="347.0" text="Giving a name for your Playlist" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Arial Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameField" alignment="CENTER" layoutX="7.0" layoutY="100.0" prefHeight="32.0" prefWidth="335.0" style="-fx-background-color: #484b4b;">
+                     <font>
+                        <Font name="Arial Bold" size="17.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="126.0" layoutY="144.0" mnemonicParsing="false" onAction="#createPlaylist" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #af9cff; -fx-background-radius: 20;" text="Submit" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane layoutY="125.0" prefHeight="5.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="haveList" layoutY="206.0" prefHeight="340.0" prefWidth="611.0" style="-fx-background-color: #535353; -fx-background-radius: 5;">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" prefHeight="38.0" prefWidth="202.0" text="List of music" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="25.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane hbarPolicy="NEVER" layoutY="61.0" prefHeight="286.0" prefWidth="621.0" style="-fx-background-color: black;" vbarPolicy="NEVER">
+                     <content>
+                        <AnchorPane fx:id="Parent" prefHeight="284.0" prefWidth="620.0" style="-fx-background-color: #484b4b;" />
+                     </content>
+                  </ScrollPane>
+                  <ImageView fx:id="auto" fitHeight="48.0" fitWidth="72.0" layoutX="474.0" layoutY="3.0" onMouseClicked="#changetoRandom" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/nghethutu.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="random" fitHeight="48.0" fitWidth="72.0" layoutX="472.0" layoutY="3.0" onMouseClicked="#changetoAuto" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/nghengaunhien.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="48.0" fitWidth="72.0" layoutX="556.0" layoutY="3.0" onMouseClicked="#addmusic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/addalbum.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="378.0" layoutY="-15.0" onMouseClicked="#startPlaylist" prefHeight="70.0" prefWidth="72.0" rotate="90.0" text="🔼">
+                     <font>
+                        <Font size="66.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.9166666865348816" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.774390243902439">
+                                 <color>
+                                    <Color red="1.0" blue="0.8372091054916382" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="imgList" fitHeight="136.0" fitWidth="171.0" layoutX="228.0" layoutY="13.0" onMouseClicked="#imageChooser" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="nameList" layoutX="14.0" layoutY="154.0" prefHeight="38.0" prefWidth="347.0" text="Playlistname" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="leftbtn" onMouseClicked="#left" prefHeight="36.0" prefWidth="52.0" rotate="-180.0" text="➤" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="44.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets left="20.0" />
+         </opaqueInsets>
+      </AnchorPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</StackPane>
